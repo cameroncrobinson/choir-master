@@ -109,3 +109,15 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+button {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 135%;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--accent-border);
+  background: var(--accent-bg);
+  color: var(--accent);
+  cursor: pointer;
+}
