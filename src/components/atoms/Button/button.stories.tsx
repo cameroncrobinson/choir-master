@@ -1,41 +1,50 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Button } from './Button';
+import { Button } from './button';
 
 const meta = {
+  title: 'Atoms/button',
   component: Button,
-  args: {
-    text: 'Click me',
-  },
-  title: 'Atoms/Button',
   tags: ['autodocs'],
+  argTypes: {
+    variant: {
+      control: { type: 'select' },
+      options: [
+        'default',
+        'secondary',
+        'destructive',
+        'ghost',
+        'link',
+        'outline',
+      ],
+    },
+    size: {
+      control: { type: 'select' },
+      options: ['default', 'icon', 'sm', 'lg'],
+    },
+  },
+  parameters: {
+    layout: 'centered',
+  },
 } satisfies Meta<typeof Button>;
 
 export default meta;
+
 type Story = StoryObj<typeof meta>;
 
+// Button Variants
+
+// <Button variant="default">Default</Button>
 export const Default: Story = {
   args: {
-    children: 'Click me',
+    variant: 'default',
+    children: 'Default',
   },
 };
 
-export const Primary: Story = {
-  args: {
-    children: 'Primary Button',
-    variant: 'primary',
-  },
-};
-
+// <Button variant="secondary">Secondary</Button>
 export const Secondary: Story = {
   args: {
-    children: 'Secondary Button',
     variant: 'secondary',
-  },
-};
-
-export const Disabled: Story = {
-  args: {
-    children: 'Disabled Button',
-    disabled: true,
+    children: 'Secondary',
   },
 };
