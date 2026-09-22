@@ -1,7 +1,7 @@
-import { AppSidebar } from './app-sidebar';
-import { ChartAreaInteractive } from './chart-area-interactive';
+import { AppSidebar } from './organisms/Sidebar/app-sidebar';
+import { ChartAreaInteractive } from './molecules/ChartArea/chart-area-interactive';
 import { SectionCards } from './section-cards';
-import { SiteHeader } from './site-header';
+import { SiteHeader } from './atoms/SiteHeader/site-header';
 import { SidebarInset, SidebarProvider } from './ui/sidebar';
 
 export default function Dashboard() {
